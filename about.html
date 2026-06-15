@@ -1,131 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stackly | About Us</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Stackly</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header" id="top">
-    <nav class="nav">
-      <a class="brand" href="index.html" aria-label="Stackly home">
-        <span class="brand-mark">S</span>
-        <span>Stackly</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a class="active" href="about.html">About</a>
-        <a href="contact-us.html">Contact</a>
-      </div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <header class="site-header inner-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Stackly home"><span class="brand-mark">S</span><span>STACKLY</span></a>
+      <div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact-us.html">Contact</a></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menuOverlay"><span></span><span></span><span></span></button>
     </nav>
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+      <div class="menu-logo brand"><span class="brand-mark">S</span><span>STACKLY</span></div>
+      <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
+      <div class="menu-word">Menu</div>
+      <nav class="menu-panel" aria-label="Full screen navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact-us.html">Contact</a></nav>
+      <aside class="menu-info">
+        <span class="menu-dot"></span>
+        <div><h3>Headquarters</h3><p>MMR COMPLEX,<br>SALEM, Tamil Nadu 636008.</p></div>
+        <div><h3>Social Media</h3><a href="#">Facebook</a><a href="#">Twitter</a><a href="#">Linked In</a><a href="#">Instagram</a></div>
+        <div><h3>Contact Us</h3><a href="mailto:info@thestackly.com">info@thestackly.com</a><a href="tel:+917010792745">+91 70107 92745</a></div>
+      </aside>
+    </div>
+    <section class="about-page-hero section-pad">
+      <h1>About Us.</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <strong>About Us</strong>
+      </div>
+    </section>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="page-hero-inner reveal">
-        <p class="eyebrow">About Company</p>
-        <h1>About Us.</h1>
-        <p><a href="index.html">Home</a> | About Us</p>
+    <section class="about-wide-media">
+      <img src="assets/about-wide.png" alt="Professional working from home with tablet">
+    </section>
+
+    <section class="about-company section-pad">
+      <p class="eyebrow">About Company</p>
+      <div class="about-company-grid">
+        <img src="assets/about.png" alt="Professional using a tablet">
+        <div>
+          <p class="lead">Stackly is a powerful platform that streamlines workflow, enhances efficiency, and drives digital success. It offers a user-friendly experience with seamless integration, making it an essential tool for businesses and individuals looking to optimize their online operations.</p>
+          <p>Founded in 2015, Stackly has grown into one of the leading and most innovative IT companies in the industry. With a team of over 120 talented professionals, we specialize in delivering cutting-edge technology solutions that drive business success. Our commitment to innovation, excellence, and customer satisfaction has positioned us as a trusted partner for businesses seeking to leverage technology for growth and efficiency.</p>
+        </div>
       </div>
     </section>
 
-    <section class="split about-page-split">
-      <div class="about-panel reveal">
-        <p class="eyebrow">About Company</p>
-        <h2>Stackly streamlines workflow, enhances efficiency, and drives digital success.</h2>
-        <p>Stackly offers a user-friendly experience with seamless integration, making it useful for businesses and individuals optimizing online operations.</p>
-        <p>Founded in 2015, Stackly has grown into one of the leading and most innovative IT companies in the industry, with a team of over 120 talented professionals.</p>
-      </div>
-      <div class="hero-visual reveal">
-        <img src="assets/stackly-hero.png" alt="Stackly technology workspace illustration">
+    <section class="about-marquee" aria-label="Company values">
+      <div class="about-marquee-track">
+        <em>Continuous Learning</em><b>*</b><span>Trust</span><b>*</b><em>Innovation</em><b>*</b><span>Support</span><b>*</b>
       </div>
     </section>
 
-    <section class="tag-cloud">
-      <div class="tag-cloud-inner reveal">
-        <span>Strong Leadership</span>
-        <span>Work-Life Balance</span>
-        <span>Recognition and Rewards</span>
-        <span>Continuous Learning</span>
-        <span>Trust</span>
-        <span>Communication</span>
-        <span>Culture</span>
-        <span>Amazing Design</span>
-      </div>
+    <section class="mission-grid">
+      <article class="mission-text mission-one">
+        <span>1.</span>
+        <h2>Our Mission</h2>
+        <p>Our mission is simple-create tools that solve real problems. With a strong focus on innovation, reliability, and user satisfaction, we aim to enhance your experience, whether you're an individual or part of a growing business.</p>
+      </article>
+      <article class="mission-image"><img src="assets/video.png" alt="Team collaboration in office"></article>
+      <article class="mission-text mission-two">
+        <span>2.</span>
+        <h2>Our Vision</h2>
+        <p>We envision a future where technology serves as an enabler for creativity and productivity. Stackly strives to be a leader in providing smart, scalable, and user-friendly tools that cater to diverse user needs.</p>
+      </article>
+      <article class="mission-image mission-image-wide"><img src="assets/skills.png" alt="Team member working at a desk"></article>
+      <article class="mission-text mission-three">
+        <span>3.</span>
+        <h2>Why Us?</h2>
+        <p>Our team brings a wealth of experience and knowledge to every project. We prioritize your needs and goals to deliver solutions that truly add value. We stick to deadlines and offer ongoing support to keep your digital presence thriving.</p>
+      </article>
     </section>
 
-    <section class="mission-section">
-      <div class="mission-grid">
-        <article class="mission-card reveal">
-          <span>1.</span>
-          <h3>Our Mission</h3>
-          <p>Our mission is simple: create tools that solve real problems. With a strong focus on innovation, reliability, and user satisfaction, we enhance experiences for individuals and growing businesses.</p>
-        </article>
-        <article class="mission-card reveal">
-          <span>2.</span>
-          <h3>Our Vision</h3>
-          <p>We envision a future where technology enables creativity and productivity through smart, scalable, and user-friendly tools.</p>
-        </article>
-        <article class="mission-card reveal">
-          <span>3.</span>
-          <h3>Why Us?</h3>
-          <p>Our team brings experience to every project, prioritizes customer goals, sticks to deadlines, and offers ongoing support for lasting digital growth.</p>
-        </article>
+    <section class="testimonial-band about-testimonial">
+      <div class="testimonial-heading">
+        <h2>What<br>People <span>Say?</span></h2>
       </div>
-    </section>
-
-    <section class="testimonials">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Testimonials</p>
-        <h2>What People Say?</h2>
-      </div>
-      <div class="quote-grid three">
-        <blockquote class="reveal">
-          <p>Stackly transformed the way I manage my campaigns. The automation features saved me countless hours!</p>
-          <cite>Joe Davis, CEO</cite>
-        </blockquote>
-        <blockquote class="reveal">
-          <p>The best part about Stackly is its user-friendly interface. It is simple yet powerful.</p>
-          <cite>Daniel Roden, Managing Director</cite>
-        </blockquote>
-        <blockquote class="reveal">
-          <p>As a freelancer, I needed an all-in-one solution to manage my projects. Stackly is the perfect fit.</p>
-          <cite>Emily T, Project Manager</cite>
-        </blockquote>
-      </div>
-    </section>
-
-    <section class="cta-strip">
-      <div class="cta-inner reveal">
-        <h2>Have a project in mind?</h2>
-        <a class="btn primary" href="contact-us.html">Let's get to work.</a>
+      <div class="testimonial-card">
+        <div class="client-avatar" aria-hidden="true"></div>
+        <div class="quote-area">
+          <p>"Stackly transformed the way I manage my campaigns. The automation features saved me countless hours!"</p>
+          <div class="quote-bottom">
+            <div><strong>Joe Davis</strong><span>CEO</span></div>
+            <div class="stars" aria-label="Five star rating">★★★★★</div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <a class="brand" href="index.html">
-      <span class="brand-mark">S</span>
-      <span>Stackly</span>
-    </a>
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact-us.html">Contact</a>
-    </div>
-    <p>&copy; 2025 Copyright Stackly. All Rights Reserved.</p>
+    <div class="footer-top"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>STACKLY</span></a><div class="footer-social"><a href="404.html" data-icon="f">Facebook</a><a href="404.html" data-icon="in">LinkedIn</a><a href="404.html" data-icon="ig">Instagram</a><a href="404.html" data-icon="x">Twitter</a></div></div>
+    <div class="footer-main"><div class="footer-cta"><h2>Have a project in mind?</h2><a href="contact-us.html">Let's get to work.</a><div class="footer-pills"><a href="mailto:info@thestackly.com">info@thestackly.com</a><a href="tel:+917010792745">+91 70107 92745</a></div></div><div class="footer-links"><h3>Useful Links</h3><a href="#">Careers</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact-us.html">Contact</a><form class="subscribe"><input type="email" placeholder="Type Your Email" aria-label="Newsletter email"><button aria-label="Subscribe">&#8599;</button></form></div></div>
+    <p class="copyright">&copy; 2025 Copyright Stackly. All Rights Reserved.</p>
   </footer>
-
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#708;</button>
   <script src="script.js"></script>
 </body>
 </html>
