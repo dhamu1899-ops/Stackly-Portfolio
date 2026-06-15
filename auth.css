@@ -726,6 +726,28 @@ a {
   }
 }
 
+/* Final auth error alignment */
+.terms.auth-terms {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 6px;
+}
+
+.terms.auth-terms span {
+  min-width: 0;
+  white-space: normal;
+}
+
+.terms.auth-terms .field-error {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  white-space: normal;
+  line-height: 1.25;
+}
+
 @media (max-width: 640px) {
   .auth-overlay {
     padding: 12px;

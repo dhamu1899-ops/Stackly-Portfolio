@@ -908,6 +908,13 @@
   .course-meta {
     color: #b7c6c2 !important;
   }
+
+  .btn-danger,
+  .btn-danger * {
+    background: rgba(255, 74, 74, 0.14) !important;
+    color: #ffdddd !important;
+    border: 1px solid rgba(255, 74, 74, 0.30) !important;
+  }
 </style>
 </head>
 <body>
@@ -1388,7 +1395,7 @@
                     <h2 class="logout-title">See You Soon!</h2>
                     <p class="logout-text">Are you sure you want to log out of your student account?</p>
                     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                     <a href="login.html">   <button class="btn btn-danger" onclick="localStorage.removeItem('stacklyRole'); alert('Logging out...')">Yes, Logout</button></a>
+                     <a href="index.html"><button class="btn btn-danger" onclick="localStorage.removeItem('stacklyRole')">Yes, Logout</button></a>
                         <button class="btn btn-primary" onclick="showPage('dashboard', document.querySelector('.nav-link'))">Cancel, Go Back</button>
                     </div>
                 </div>

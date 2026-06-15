@@ -20,7 +20,7 @@
       <h1 id="notFoundTitle">Page Not Found</h1>
       <p>This page is not available right now. You can go back to the previous page or return to the home page.</p>
       <div class="not-found-actions">
-        <button type="button" onclick="history.back()">Go Back</button>
+        <button type="button" onclick="if (history.length > 1) { history.back(); } else { window.location.href='index.html'; }">Go Back</button>
         <a href="index.html">Back to Home</a>
       </div>
     </section>

@@ -123,6 +123,17 @@ if (cursorDot && cursorRing && window.matchMedia("(pointer: fine)").matches) {
     cursorRing.classList.add("is-visible");
   });
 
+  const restoreCursor = () => {
+    cursorDot.classList.add("is-visible");
+    cursorRing.classList.add("is-visible");
+  };
+
+  window.addEventListener("focus", restoreCursor);
+  window.addEventListener("pageshow", restoreCursor);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) restoreCursor();
+  });
+
   window.addEventListener("mouseleave", () => {
     cursorDot.classList.remove("is-visible");
     cursorRing.classList.remove("is-visible");
