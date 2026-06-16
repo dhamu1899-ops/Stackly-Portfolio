@@ -162,6 +162,33 @@
         .bg-gray-900 {
             background: #070b0c !important;
         }
+
+        /* Mobile admin header icon visibility fix only */
+        @media (max-width: 1023px) {
+            body > .lg\:hidden:first-of-type button i,
+            body > .lg\:hidden:first-of-type .fas,
+            body > .lg\:hidden:first-of-type svg,
+            main .lg\:hidden .fa-search,
+            main .lg\:hidden .fas.fa-search {
+                color: #10231f !important;
+                fill: #10231f !important;
+                stroke: #10231f !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+            body > .lg\:hidden:first-of-type button {
+                color: #10231f !important;
+            }
+            main .lg\:hidden .relative i.fa-search {
+                z-index: 2 !important;
+                pointer-events: none !important;
+            }
+            main .lg\:hidden input::placeholder {
+                color: rgba(16, 35, 31, 0.65) !important;
+                opacity: 1 !important;
+            }
+        }
+
     </style>
 <style>
   /* Final dashboard visibility fixes */
