@@ -1007,6 +1007,533 @@
     }
   }
 </style>
+<style>
+  /* Final light student dashboard theme */
+  body {
+    background: #f0f4f8 !important;
+    color: #1f2937 !important;
+  }
+
+  .sidebar {
+    background: linear-gradient(135deg, #0f766e, #0ea5e9) !important;
+    border-right: 0 !important;
+    box-shadow: 18px 0 40px rgba(15, 118, 110, 0.16) !important;
+  }
+
+  .sidebar-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24) !important;
+  }
+
+  .sidebar-header > div:first-child {
+    background: #ffffff !important;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.14) !important;
+  }
+
+  .sidebar-header h2 {
+    -webkit-text-fill-color: #ffffff !important;
+    color: #ffffff !important;
+  }
+
+  .sidebar-header p {
+    color: rgba(255, 255, 255, 0.78) !important;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.82) !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.28) !important;
+    box-shadow: none !important;
+  }
+
+  .main-content,
+  .dashboard-content {
+    background: #f0f4f8 !important;
+  }
+
+  .top-header,
+  .content-card,
+  .stat-card,
+  .course-card,
+  .timeline-content,
+  .chart-container {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #e5e7eb !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.06) !important;
+  }
+
+  .page-title,
+  .content-card h3,
+  .course-title,
+  .stat-number,
+  .timeline-title,
+  .data-table td,
+  .data-table td *,
+  .student-name {
+    color: #1f2937 !important;
+  }
+
+  .stat-label,
+  .timeline-desc,
+  .timeline-time,
+  .data-table th,
+  .course-meta,
+  .student-email,
+  .page-subtitle {
+    color: #64748b !important;
+  }
+
+  .data-table,
+  .data-table tbody,
+  .data-table tr,
+  .data-table td {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+  }
+
+  .data-table thead,
+  .data-table th {
+    background: #f8fafc !important;
+    color: #64748b !important;
+  }
+
+  select,
+  option,
+  input,
+  textarea,
+  .form-control,
+  .search-bar {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  .user-avatar,
+  .badge,
+  .menu-toggle {
+    background: linear-gradient(135deg, #0f766e, #00f0b5) !important;
+    color: #ffffff !important;
+  }
+
+  .logout-btn,
+  .logout-btn * {
+    color: #dc2626 !important;
+  }
+
+  .logout-btn {
+    background: #fff1f2 !important;
+    border-color: #fecdd3 !important;
+  }
+
+  /* Final colorful student dashboard polish */
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 32%),
+      linear-gradient(135deg, #eefcf8 0%, #f8fbff 46%, #fff7ed 100%) !important;
+  }
+
+  .sidebar {
+    background: linear-gradient(180deg, #0f766e 0%, #0891b2 52%, #2563eb 100%) !important;
+  }
+
+  .sidebar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 28% 10%, rgba(255, 255, 255, 0.22), transparent 24%),
+      radial-gradient(circle at 86% 72%, rgba(0, 240, 181, 0.22), transparent 28%);
+  }
+
+  .student-sidebar-close {
+    display: none;
+  }
+
+  .top-header {
+    background: rgba(255, 255, 255, 0.92) !important;
+    border: 1px solid rgba(15, 118, 110, 0.12) !important;
+    backdrop-filter: blur(18px);
+  }
+
+  .stat-card:nth-child(1) {
+    background: linear-gradient(135deg, #ecfdf5, #ffffff) !important;
+    border-color: #a7f3d0 !important;
+  }
+
+  .stat-card:nth-child(2) {
+    background: linear-gradient(135deg, #eff6ff, #ffffff) !important;
+    border-color: #bfdbfe !important;
+  }
+
+  .stat-card:nth-child(3) {
+    background: linear-gradient(135deg, #fff7ed, #ffffff) !important;
+    border-color: #fed7aa !important;
+  }
+
+  .stat-card:nth-child(4) {
+    background: linear-gradient(135deg, #f5f3ff, #ffffff) !important;
+    border-color: #ddd6fe !important;
+  }
+
+  .content-card,
+  .course-card,
+  .timeline-content,
+  .chart-container {
+    border-top: 3px solid rgba(20, 184, 166, 0.42) !important;
+  }
+
+  .badge {
+    background: linear-gradient(135deg, #14b8a6, #38bdf8) !important;
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle.is-hidden {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: scale(0.8) !important;
+    }
+
+    .student-sidebar-close {
+      display: grid;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 5;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 0;
+      border-radius: 14px;
+      color: #0f766e;
+      background: #ffffff;
+      font-size: 26px;
+      line-height: 1;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+    }
+
+    .sidebar.active .student-sidebar-close {
+      display: grid;
+    }
+  }
+</style>
+<style>
+  /* Final student visibility, chart, and logout correction */
+  .data-table tbody tr,
+  .data-table tbody tr:first-child,
+  .data-table tbody tr:first-child td,
+  .data-table td,
+  .data-table td * {
+    color: #1f2937 !important;
+  }
+
+  .data-table tbody tr:first-child {
+    background: linear-gradient(90deg, #d1fae5, #ecfeff) !important;
+  }
+
+  .student-performance-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.8fr);
+    gap: 24px;
+    min-height: 300px !important;
+    align-items: stretch;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(20, 184, 166, 0.16), transparent 28%),
+      linear-gradient(135deg, #ffffff, #f8fbff) !important;
+    border: 1px solid rgba(20, 184, 166, 0.18) !important;
+    border-radius: 20px;
+    padding: 24px;
+  }
+
+  .student-chart-grid {
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    gap: 16px;
+    height: 250px;
+    min-height: 250px;
+    padding: 18px 18px 8px;
+    border-radius: 18px;
+    background:
+      repeating-linear-gradient(to top, rgba(15, 23, 42, 0.06) 0 1px, transparent 1px 48px),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(236, 253, 245, 0.42));
+  }
+
+  .student-chart-bar {
+    position: relative;
+    display: grid;
+    align-content: end;
+    justify-items: center;
+    width: min(72px, 16%);
+    height: var(--score);
+    min-height: 80px;
+    border-radius: 16px 16px 8px 8px;
+    color: #ffffff;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--tone) 78%, #ffffff), var(--tone));
+    box-shadow: 0 18px 34px color-mix(in srgb, var(--tone) 26%, transparent);
+    padding: 12px 8px;
+  }
+
+  .student-chart-bar span {
+    position: absolute;
+    top: -32px;
+    color: #1f2937;
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  .student-chart-bar b {
+    color: #ffffff;
+    font-size: 13px;
+  }
+
+  .student-chart-summary {
+    display: grid;
+    align-content: center;
+    gap: 12px;
+    padding: 24px;
+    border-radius: 18px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0f766e, #0ea5e9);
+    box-shadow: 0 20px 44px rgba(14, 165, 233, 0.20);
+  }
+
+  .student-chart-summary strong {
+    color: #ffffff;
+    font-size: 24px;
+  }
+
+  .student-chart-summary p {
+    color: rgba(255, 255, 255, 0.82) !important;
+    line-height: 1.6;
+  }
+
+  .logout-container {
+    background:
+      radial-gradient(circle at top, rgba(0, 240, 181, 0.20), transparent 28%),
+      linear-gradient(135deg, #ffffff, #ecfeff) !important;
+    border: 1px solid rgba(20, 184, 166, 0.24);
+    border-radius: 24px;
+    padding: 48px 24px !important;
+  }
+
+  .logout-icon {
+    color: #0f766e !important;
+    text-shadow: none !important;
+  }
+
+  .logout-title {
+    color: #0f172a !important;
+    opacity: 1 !important;
+  }
+
+  .logout-text {
+    color: #475569 !important;
+    opacity: 1 !important;
+  }
+
+  .logout-container .btn-danger {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #ef4444, #f97316) !important;
+    border: 0 !important;
+  }
+
+  .logout-container .btn-primary {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #14b8a6, #2563eb) !important;
+    border: 0 !important;
+  }
+
+  @media (max-width: 760px) {
+    .student-performance-panel {
+      grid-template-columns: 1fr;
+      padding: 16px;
+    }
+
+    .student-chart-grid {
+      gap: 10px;
+      height: 220px;
+      min-height: 220px;
+    }
+
+    .student-chart-bar {
+      width: 18%;
+      min-height: 68px;
+    }
+  }
+</style>
+<style>
+  /* Final student content and visibility pass */
+  .student-dashboard-info {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .student-dashboard-info article {
+    padding: 22px;
+    border-radius: 22px;
+    border: 1px solid rgba(20, 184, 166, 0.18);
+    background: linear-gradient(135deg, #ffffff, #ecfeff);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  }
+
+  .student-dashboard-info span {
+    display: inline-flex;
+    margin-bottom: 10px;
+    color: #0f766e;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .student-dashboard-info strong {
+    display: block;
+    color: #0f172a;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .student-dashboard-info p,
+  .content-card label,
+  .content-card .checkbox-label,
+  .content-card input[type="checkbox"] + span {
+    color: #475569 !important;
+  }
+
+  .data-table tbody tr:hover,
+  .data-table tbody tr:hover td,
+  .data-table tbody tr:hover td * {
+    color: #0f172a !important;
+    background: #e0f7f2 !important;
+  }
+
+  .data-table tbody tr:nth-child(even),
+  .data-table tbody tr:nth-child(even) td {
+    background: #f8fafc !important;
+    color: #1f2937 !important;
+  }
+
+  .data-table tbody tr:nth-child(odd),
+  .data-table tbody tr:nth-child(odd) td {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+  }
+
+  .data-table tbody tr:nth-child(2),
+  .data-table tbody tr:nth-child(2) td {
+    background: #d1fae5 !important;
+    color: #0f172a !important;
+  }
+
+  .status-badge,
+  .status-badge * {
+    color: #0f172a !important;
+  }
+
+  .content-card input,
+  .content-card select,
+  .content-card textarea {
+    color: #0f172a !important;
+    background: #ffffff !important;
+  }
+
+  .content-card input::placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  }
+
+  .course-card {
+    min-height: 250px;
+  }
+
+  @media (max-width: 760px) {
+    .student-dashboard-info {
+      grid-template-columns: 1fr;
+    }
+
+    .data-table {
+      min-width: 680px;
+    }
+
+    .content-card {
+      overflow-x: auto;
+    }
+  }
+</style>
+<style>
+  /* Final student dashboard hover effects */
+  .nav-link,
+  .stat-card,
+  .course-card,
+  .content-card,
+  .timeline-content,
+  .student-dashboard-info article,
+  .btn,
+  .notification-icon,
+  .user-avatar {
+    transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease, background 0.24s ease, color 0.24s ease !important;
+  }
+
+  .nav-link:hover {
+    transform: translateX(8px) scale(1.015) !important;
+    box-shadow: 0 16px 34px rgba(255, 255, 255, 0.14) !important;
+  }
+
+  .stat-card:hover,
+  .course-card:hover,
+  .content-card:hover,
+  .timeline-content:hover,
+  .student-dashboard-info article:hover {
+    transform: translateY(-8px) !important;
+    border-color: rgba(20, 184, 166, 0.44) !important;
+    box-shadow: 0 26px 62px rgba(15, 23, 42, 0.13) !important;
+  }
+
+  .course-card:hover .course-image,
+  .stat-card:hover .stat-icon {
+    transform: scale(1.08) rotate(-3deg);
+    transition: transform 0.24s ease;
+  }
+
+  .btn:hover,
+  .notification-icon:hover,
+  .user-avatar:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 16px 34px rgba(20, 184, 166, 0.18) !important;
+  }
+
+  .data-table tbody tr {
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+
+  .data-table tbody tr:hover {
+    transform: scale(1.004) !important;
+    box-shadow: inset 4px 0 0 #14b8a6 !important;
+  }
+
+  .student-chart-bar {
+    transition: transform 0.24s ease, filter 0.24s ease !important;
+  }
+
+  .student-chart-bar:hover {
+    transform: translateY(-8px) scale(1.04);
+    filter: saturate(1.15);
+  }
+</style>
 </head>
 <body>
 
@@ -1018,6 +1545,7 @@
 
     <!-- Sidebar -->
     <nav class="sidebar">
+        <button class="student-sidebar-close" type="button" onclick="toggleSidebar()" aria-label="Close menu">×</button>
         <a href="index.html" class="sidebar-header" style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 20px; text-decoration: none;">
             <div style="width: 50px; height: 50px; border-radius: 12px; overflow: hidden; background: linear-gradient(135deg, #c4c8d3, #929aaf); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,51,204,0.3);">
                 <img src="assets/stackly-logo.svg" alt="Stackly logo" style="width: 36px; height: 36px; object-fit: cover; border-radius: 8px;">
@@ -1153,10 +1681,37 @@
         <section id="analytics" class="page-section">
             <div class="content-card">
                 <h3><span>📈</span> Performance Analytics</h3>
-                <div class="chart-container">
-                    <div class="chart-placeholder">📊</div>
-                    <p style="color: #888;">Performance Chart Visualization</p>
+                <div class="chart-container student-performance-panel">
+                    <div class="student-chart-grid" aria-label="Student performance chart">
+                        <div class="student-chart-bar" style="--score: 90%; --tone: #14b8a6"><span>90%</span><b>Web</b></div>
+                        <div class="student-chart-bar" style="--score: 85%; --tone: #3b82f6"><span>85%</span><b>Data</b></div>
+                        <div class="student-chart-bar" style="--score: 72%; --tone: #f59e0b"><span>72%</span><b>ML</b></div>
+                        <div class="student-chart-bar" style="--score: 80%; --tone: #8b5cf6"><span>80%</span><b>DB</b></div>
+                        <div class="student-chart-bar" style="--score: 88%; --tone: #ec4899"><span>88%</span><b>Cloud</b></div>
+                    </div>
+                    <div class="student-chart-summary">
+                        <strong>Learning momentum</strong>
+                        <p>Scores are trending upward across core modules, with Web Development leading this week.</p>
+                    </div>
                 </div>
+            </div>
+
+            <div class="student-dashboard-info">
+                <article>
+                    <span>Today</span>
+                    <strong>3 live classes</strong>
+                    <p>Web Development, Data Structures Lab, and Machine Learning Seminar are scheduled.</p>
+                </article>
+                <article>
+                    <span>Assignments</span>
+                    <strong>5 pending tasks</strong>
+                    <p>Two submissions are due this week. Complete priority tasks before Friday.</p>
+                </article>
+                <article>
+                    <span>Mentor Note</span>
+                    <strong>Project review ready</strong>
+                    <p>Your Machine Learning phase 1 feedback is available in the analytics section.</p>
+                </article>
             </div>
 
             <div class="stats-grid">
@@ -1308,6 +1863,19 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="course-card"><div class="course-image">UI</div><div class="course-body"><div class="course-title">UI/UX Design</div><div class="course-meta"><span>Prof. Taylor</span><span>8 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 68%; background: #8b5cf6;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>68% Complete</span><span>5/8 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">AI</div><div class="course-body"><div class="course-title">AI Fundamentals</div><div class="course-meta"><span>Dr. Kumar</span><span>12 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 52%; background: #14b8a6;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>52% Complete</span><span>6/12 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">JS</div><div class="course-body"><div class="course-title">Advanced JavaScript</div><div class="course-meta"><span>Prof. Allen</span><span>9 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 88%; background: #f59e0b;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>88% Complete</span><span>8/9 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">PY</div><div class="course-body"><div class="course-title">Python Programming</div><div class="course-meta"><span>Dr. Meera</span><span>10 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 91%; background: #22c55e;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>91% Complete</span><span>9/10 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">CL</div><div class="course-body"><div class="course-title">Cloud Computing</div><div class="course-meta"><span>Prof. Wilson</span><span>11 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 57%; background: #0ea5e9;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>57% Complete</span><span>6/11 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">CS</div><div class="course-body"><div class="course-title">Cyber Security</div><div class="course-meta"><span>Dr. Ahmed</span><span>13 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 40%; background: #ef4444;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>40% Complete</span><span>5/13 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">DM</div><div class="course-body"><div class="course-title">Digital Marketing</div><div class="course-meta"><span>Prof. Nancy</span><span>7 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 73%; background: #ec4899;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>73% Complete</span><span>5/7 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">API</div><div class="course-body"><div class="course-title">API Development</div><div class="course-meta"><span>Prof. Jacob</span><span>8 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 64%; background: #06b6d4;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>64% Complete</span><span>5/8 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">QA</div><div class="course-body"><div class="course-title">Software Testing</div><div class="course-meta"><span>Dr. Priya</span><span>6 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 83%; background: #6366f1;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>83% Complete</span><span>5/6 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">DV</div><div class="course-body"><div class="course-title">Data Visualization</div><div class="course-meta"><span>Prof. Green</span><span>9 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 76%; background: #10b981;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>76% Complete</span><span>7/9 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">MB</div><div class="course-body"><div class="course-title">Mobile App Development</div><div class="course-meta"><span>Dr. Ravi</span><span>12 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 49%; background: #f97316;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>49% Complete</span><span>6/12 Modules</span></div></div></div>
+                <div class="course-card"><div class="course-image">DV</div><div class="course-body"><div class="course-title">DevOps Basics</div><div class="course-meta"><span>Prof. Lee</span><span>10 weeks</span></div><div class="progress-bar" style="margin-bottom: 10px;"><div class="progress-fill" style="width: 58%; background: #0f766e;"></div></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #64748b;"><span>58% Complete</span><span>6/10 Modules</span></div></div></div>
             </div>
         </section>
 
@@ -1534,7 +2102,6 @@
                 }
                 userData.firstLetter = firstLetter;
                 userData.name = nameInput.value.trim();
-                alert('Profile updated! Avatar letter changed to: ' + firstLetter);
             }
         }
 
@@ -1639,8 +2206,10 @@
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
             const overlay = document.querySelector('.overlay');
+            const toggle = document.querySelector('.menu-toggle');
             sidebar.classList.toggle('active');
             overlay.classList.toggle('active');
+            toggle.classList.toggle('is-hidden', sidebar.classList.contains('active'));
         }
 
         // Animate progress bars on load

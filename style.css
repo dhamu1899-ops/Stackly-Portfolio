@@ -554,7 +554,7 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("assets/hero.png") center / contain no-repeat;
+  background: url("assets/hero.webp") center / contain no-repeat;
   transform-origin: center;
   animation: heroImagePulse 6.5s 1.2s ease-in-out infinite;
 }
@@ -1906,7 +1906,7 @@ textarea {
   padding-top: 100px;
   background:
     linear-gradient(rgba(23,24,24,0.42), rgba(23,24,24,0.42)),
-    url("assets/video.png") center / cover no-repeat;
+    url("assets/video.webp") center / cover no-repeat;
   overflow: hidden;
 }
 

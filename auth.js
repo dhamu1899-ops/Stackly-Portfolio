@@ -68,6 +68,23 @@ document.addEventListener("click", (event) => {
     const hiddenText = eyeButton.querySelector(".sr-only");
     if (hiddenText) hiddenText.textContent = input.type === "password" ? "Show password" : "Hide password";
   }
+
+  const roleButton = event.target.closest(".mobile-role-options button");
+  if (roleButton) {
+    const group = roleButton.closest(".mobile-role-options");
+    const select = document.getElementById(group.dataset.select);
+    if (!select) return;
+    select.value = roleButton.dataset.role;
+    select.dispatchEvent(new Event("change", { bubbles: true }));
+    group.querySelectorAll("button").forEach((button) => {
+      button.classList.toggle("is-selected", button === roleButton);
+    });
+    const field = group.closest(".auth-field");
+    field?.classList.remove("has-error");
+    field?.querySelector(".field-shell")?.classList.remove("has-error");
+    const error = field?.querySelector(".field-error");
+    if (error) error.textContent = "";
+  }
 });
 
 document.addEventListener("submit", (event) => {
@@ -128,8 +145,7 @@ document.addEventListener("submit", (event) => {
     localStorage.setItem("loggedInUser", nameInput.value.trim());
     localStorage.setItem("stacklyEmail", emailInput.value.trim());
     localStorage.setItem("stacklyRole", roleSelect.value);
-    showAuthMessage(form, "Signup successful. Redirecting to login...", "success");
-    setTimeout(() => showPanel("login"), 900);
+    showPanel("login");
   }
 
   if (event.target.id === "loginForm") {

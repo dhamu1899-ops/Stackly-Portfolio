@@ -51,11 +51,11 @@
           <h2>Welcome Back</h2>
           <p>Login to continue your Stackly dashboard.</p>
           <form class="auth-form premium-auth-form" id="loginForm" novalidate>
-            <label class="auth-field"><span>Sign in as</span><div class="field-shell select-shell"><i>Role</i><select id="loginRole" required>
+            <label class="auth-field role-field"><span>Sign in as</span><div class="field-shell select-shell"><i>Role</i><select id="loginRole" required>
               <option value="" selected>Select Role</option>
               <option value="admin">Admin</option>
               <option value="student">Student</option>
-            </select></div><small class="field-error"></small></label>
+            </select></div><div class="mobile-role-options" data-select="loginRole"><button type="button" data-role="admin">Admin</button><button type="button" data-role="student">Student</button></div><small class="field-error"></small></label>
             <label class="auth-field"><span>Email Address</span><div class="field-shell"><i>@</i><input id="loginEmail" type="email" placeholder="name@example.com" required></div><small class="field-error"></small></label>
             <label class="auth-field"><span>Password</span><div class="field-shell password-wrap"><i>Lock</i><input id="loginPassword" type="password" placeholder="Enter password" required><button type="button" class="eye-toggle" aria-label="Show password"><span class="sr-only">Show password</span></button></div><small class="field-error"></small></label>
             <label class="terms auth-terms"><input type="checkbox" required><span>I agree to the <a href="404.html">Terms & Conditions</a></span><small class="field-error"></small></label>
@@ -72,11 +72,11 @@
           <p>Signup and continue to login.</p>
           <form class="auth-form premium-auth-form" id="signupForm" novalidate>
             <label class="auth-field"><span>Full Name</span><div class="field-shell"><i>Name</i><input id="signupName" type="text" placeholder="Enter your name" required></div><small class="field-error"></small></label>
-            <label class="auth-field"><span>Account Role</span><div class="field-shell select-shell"><i>Role</i><select id="signupRole" required>
+            <label class="auth-field role-field"><span>Account Role</span><div class="field-shell select-shell"><i>Role</i><select id="signupRole" required>
               <option value="" selected>Select Role</option>
               <option value="admin">Admin</option>
               <option value="student">Student</option>
-            </select></div><small class="field-error"></small></label>
+            </select></div><div class="mobile-role-options" data-select="signupRole"><button type="button" data-role="admin">Admin</button><button type="button" data-role="student">Student</button></div><small class="field-error"></small></label>
             <label class="auth-field"><span>Email Address</span><div class="field-shell"><i>@</i><input id="signupEmail" type="email" placeholder="name@example.com" required></div><small class="field-error"></small></label>
             <label class="auth-field"><span>Password</span><div class="field-shell password-wrap"><i>Lock</i><input type="password" id="signupPassword" placeholder="Create password" required><button type="button" class="eye-toggle" aria-label="Show password"><span class="sr-only">Show password</span></button></div><small class="field-error"></small></label>
             <label class="auth-field"><span>Confirm Password</span><div class="field-shell password-wrap"><i>Key</i><input type="password" id="confirmPassword" placeholder="Confirm password" required><button type="button" class="eye-toggle" aria-label="Show password"><span class="sr-only">Show password</span></button></div><small class="field-error"></small></label>

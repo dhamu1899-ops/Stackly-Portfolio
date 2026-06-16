@@ -293,12 +293,16 @@ const setMenuOpen = (isOpen) => {
   if (!menuOverlay || !menuToggle) return;
   menuOverlay.classList.toggle("is-open", isOpen);
   menuOverlay.setAttribute("aria-hidden", String(!isOpen));
+  menuToggle.classList.toggle("is-open", isOpen);
   menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   document.body.style.overflow = isOpen ? "hidden" : "";
 };
 
 if (menuToggle) {
-  menuToggle.addEventListener("click", () => setMenuOpen(true));
+  menuToggle.addEventListener("click", () => {
+    setMenuOpen(!menuToggle.classList.contains("is-open"));
+  });
 }
 
 if (menuClose) {
