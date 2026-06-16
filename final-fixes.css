@@ -608,3 +608,19 @@
     min-height: 280px !important;
   }
 }
+
+
+/* Mobile footer contact alignment fix */
+@media (max-width: 768px){
+  .footer-contact-col,
+  .footer-contact-col p,
+  .footer-contact-col a,
+  .footer-contact-col h3{
+    text-align:center !important;
+  }
+  .footer-contact-col{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+  }
+}

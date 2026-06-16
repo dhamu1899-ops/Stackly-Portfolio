@@ -4122,3 +4122,121 @@ textarea {
     font-size: clamp(2.4rem, 11vw, 3.8rem);
   }
 }
+
+
+/* Mobile footer centering fix */
+@media (max-width: 760px) {
+  .footer-premium {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+  }
+
+  .footer-grid {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+    gap: 34px !important;
+  }
+
+  .footer-brand-col,
+  .footer-col,
+  .footer-contact-col {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-premium .brand,
+  .footer-brand-col > p,
+  .footer-contact-col p,
+  .footer-contact-col a,
+  .footer-col a {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .footer-premium h3 {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .footer-premium h3::after {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .footer-subscribe {
+    width: min(100%, 330px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .footer-icon-social {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .footer-bottom {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+
+  .footer-bottom div {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 14px 24px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-premium {
+    padding-top: 40px !important;
+    padding-bottom: 22px !important;
+  }
+
+  .footer-grid {
+    gap: 30px !important;
+  }
+
+  .footer-brand-col p,
+  .footer-contact-col p,
+  .footer-col a,
+  .footer-contact-col a {
+    font-size: 0.92rem !important;
+  }
+
+  .footer-premium h3 {
+    font-size: 1rem !important;
+  }
+
+  .footer-subscribe {
+    height: 48px !important;
+  }
+
+  .footer-subscribe input {
+    font-size: 0.9rem !important;
+  }
+
+  .footer-subscribe button {
+    width: 58px !important;
+  }
+
+  .footer-icon-social a {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
