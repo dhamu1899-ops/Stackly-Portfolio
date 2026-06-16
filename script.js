@@ -54,49 +54,31 @@ const runTypewriters = () => {
   });
 };
 
-const FIRST_LOAD_DELAY = 3000;
-const NEXT_LOAD_DELAY = 2000;
-const LOADER_NAV_DELAY = 2000;
-
 const navigateWithLoader = (url) => {
   showLoader();
   sessionStorage.setItem("stacklyNavigating", "true");
   setTimeout(() => {
     window.location.href = url;
-  }, LOADER_NAV_DELAY);
+  }, 2000);
 };
 
 const finishFirstLoad = () => {
-  const cameFromLoaderNavigation = sessionStorage.getItem("stacklyNavigating") === "true";
-  const hasLoadedBefore = sessionStorage.getItem("stacklyFirstLoadDone") === "true";
-
-  if (cameFromLoaderNavigation) {
+  if (sessionStorage.getItem("stacklyNavigating") === "true") {
     sessionStorage.removeItem("stacklyNavigating");
-    hideLoader();
-    runTypewriters();
+    setTimeout(() => {
+      hideLoader();
+      runTypewriters();
+    }, 120);
     return;
   }
-
-  const loadDelay = hasLoadedBefore ? NEXT_LOAD_DELAY : FIRST_LOAD_DELAY;
-  sessionStorage.setItem("stacklyFirstLoadDone", "true");
-
   setTimeout(() => {
     hideLoader();
     runTypewriters();
-  }, loadDelay);
+  }, 3000);
 };
 
 window.addEventListener("load", finishFirstLoad);
-window.addEventListener("pageshow", (event) => {
-  if (event.persisted) {
-    hideLoader();
-    runTypewriters();
-  }
-});
-setTimeout(() => {
-  hideLoader();
-  runTypewriters();
-}, FIRST_LOAD_DELAY + 500);
+setTimeout(hideLoader, 3000);
 
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
 document.querySelectorAll(".nav-links a, .menu-panel a, .footer-links a").forEach((link) => {
@@ -120,7 +102,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-if (cursorDot && cursorRing && window.matchMedia("(pointer: fine)").matches) {
+if (cursorDot && cursorRing) {
   let mouseX = window.innerWidth / 2;
   let mouseY = window.innerHeight / 2;
   let ringX = mouseX;
@@ -148,6 +130,8 @@ if (cursorDot && cursorRing && window.matchMedia("(pointer: fine)").matches) {
 
   window.addEventListener("focus", restoreCursor);
   window.addEventListener("pageshow", restoreCursor);
+  window.addEventListener("resize", restoreCursor);
+  window.addEventListener("orientationchange", restoreCursor);
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) restoreCursor();
   });
@@ -341,7 +325,6 @@ document.querySelectorAll(".social-row a, .footer-social a, .menu-info a[href='#
 
 document.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", (event) => {
-    if (link.dataset.noLoader === "true") return;
     const href = link.getAttribute("href") || "";
     if (!href || href === "#" || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("javascript:")) return;
     if (href.startsWith("#")) return;
@@ -353,28 +336,6 @@ document.querySelectorAll("a").forEach((link) => {
     navigateWithLoader(targetUrl.href);
   });
 });
-
-
-
-const notFoundBackButton = document.querySelector("[data-404-back]");
-if (notFoundBackButton) {
-  notFoundBackButton.addEventListener("click", () => {
-    const referrer = document.referrer ? new URL(document.referrer, window.location.href) : null;
-    const sameSiteReferrer = referrer && referrer.origin === window.location.origin && !referrer.pathname.endsWith("/404.html");
-
-    if (sameSiteReferrer && window.history.length > 1) {
-      window.history.back();
-      setTimeout(() => {
-        if (document.visibilityState === "visible") {
-          window.location.href = "index.html";
-        }
-      }, 700);
-      return;
-    }
-
-    window.location.href = "index.html";
-  });
-}
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
